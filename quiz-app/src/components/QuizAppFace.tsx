@@ -231,7 +231,7 @@ export default function QuizAppFace() {
                 imageWidth: 400,
                 imageHeight: 200,
                 imageAlt: "Custom image",
-                title: `Quiz is over and your total is ${marks} \nPercentage: ${marks*100/questions.length}%`,
+                title: `Congratulations! You passed the quiz and your total is ${marks} \nPercentage: ${marks*100/questions.length}%`,
                 showClass: {
                   popup: `
                     animate__animated
@@ -253,10 +253,10 @@ export default function QuizAppFace() {
         if(index+1==questions.length && marks<10){
             Swal.fire({
                 imageUrl: "https://i.redd.it/fohpg85pbl851.jpg",
-                imageWidth: 400,
+                imageWidth: 300,
                 imageHeight: 200,
                 imageAlt: "Custom image",
-                title: `Quiz is over and your total is ${marks} \nPercentage: ${marks*100/questions.length}%`,
+                title: `Unfortunately, you didn't pass the quiz and your total is ${marks} \nPercentage: ${marks*100/questions.length}%`,
                 showClass: {
                   popup: `
                     animate__animated
