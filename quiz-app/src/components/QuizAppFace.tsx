@@ -309,14 +309,11 @@ export default function QuizAppFace() {
         setIndex(index+1)
         if(index + 1 === questions.length){
             Swal.fire({
-                title: `Quiz is completed and your total score is ${marks}`,
-                showClass: {
-                  popup: `
-                    animate__animated
-                    animate__slideInLeft
-                    animate__faster
-                  `
-                },
+                imageUrl: "https://i.redd.it/fohpg85pbl851.jpg",
+                imageWidth: 300,
+                imageHeight: 200,
+                imageAlt: "Custom image",
+                title: `Unfortunately, you didn't pass the and your total is ${marks} \nPercentage: ${marks*100/questions.length}%`,
                 hideClass: {
                   popup: `
                     animate__animated
@@ -359,7 +356,7 @@ export default function QuizAppFace() {
 
   return (
     <>
-        <h1 id='heading'>QUIZ</h1>
+        <h1 id='heading'>HTML QUIZ</h1>
       <div id='container'>
         <p id='questionsLength'>Ques:{index+1}/{questions.length}</p>
         <div id='box'>
