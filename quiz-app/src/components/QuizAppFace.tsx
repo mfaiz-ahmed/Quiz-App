@@ -7,36 +7,208 @@ import 'animate.css';
 
 const questions = [
     {
-        question:'HTML Stands for' ,
-        options:['Hypertext Markup Language' , 'incorrect' , 'incorrect' , 'incorrect'],
-        correctAnswer: 'Hypertext Markup Language'
+      question: "What does HTML stand for?",
+      options: [
+        "Hyper Text Markup Language",
+        "Home Tool Markup Language",
+        "Hyperlinks and Text Markup Language",
+        "Hyper Transfer Markup Language"
+      ],
+      correctAnswer: "Hyper Text Markup Language"
     },
     {
-        question:'CSS Stands for' ,
-        options:['Cascading Style Sheet' , 'incorrect' , 'incorrect' , 'incorrect'],
-        correctAnswer: 'Cascading Style Sheet'
+      question: "Who is making the Web standards?",
+      options: [
+        "Mozilla",
+        "Microsoft",
+        "The World Wide Web Consortium",
+        "Google"
+      ],
+      correctAnswer: "The World Wide Web Consortium"
     },
     {
-        question:'JS Stands for' ,
-        options:['JavaScript' , 'incorrect' , 'incorrect' , 'incorrect'],
-        correctAnswer: 'JavaScript'
+      question: "Choose the correct HTML element for the largest heading:",
+      options: [
+        "<heading>",
+        "<h6>",
+        "<h1>",
+        "<head>"
+      ],
+      correctAnswer: "<h1>"
     },
     {
-        question:'RAM Stands for' ,
-        options:['Random Access Memory' , 'incorrect' , 'incorrect' , 'incorrect'],
-        correctAnswer: 'Random Access Memory'
+      question: "What is the correct HTML element for inserting a line break?",
+      options: [
+        "<lb>",
+        "<br>",
+        "<break>",
+        "<bl>"
+      ],
+      correctAnswer: "<br>"
     },
     {
-        question:'ROM Stands for' ,
-        options:['Read Only Memory' , 'incorrect' , 'incorrect' , 'incorrect'],
-        correctAnswer: 'Read Only Memory'
+      question: "What is the correct HTML for adding a background color?",
+      options: [
+        "<background>yellow</background>",
+        "<body style=\"background-color:yellow;\">",
+        "<body bg=\"yellow\">",
+        "<body background=\"yellow\">"
+      ],
+      correctAnswer: "<body style=\"background-color:yellow;\">"
     },
     {
-        question:'CPU Stands for' ,
-        options:['Central Processing Unit' , 'incorrect' , 'incorrect' , 'incorrect'],
-        correctAnswer: 'Central Processing Unit'
+      question: "Choose the correct HTML element to define important text",
+      options: [
+        "<b>",
+        "<important>",
+        "<i>",
+        "<strong>"
+      ],
+      correctAnswer: "<strong>"
     },
-]
+    {
+      question: "Choose the correct HTML element to define emphasized text",
+      options: [
+        "<em>",
+        "<i>",
+        "<italic>",
+        "<strong>"
+      ],
+      correctAnswer: "<em>"
+    },
+    {
+      question: "Which character is used to indicate an end tag?",
+      options: [
+        "*",
+        "/",
+        "<",
+        "^"
+      ],
+      correctAnswer: "/"
+    },
+    {
+      question: "How can you make a numbered list?",
+      options: [
+        "<ul>",
+        "<ol>",
+        "<dl>",
+        "<list>"
+      ],
+      correctAnswer: "<ol>"
+    },
+    {
+      question: "How can you make a bulleted list?",
+      options: [
+        "<ul>",
+        "<ol>",
+        "<dl>",
+        "<list>"
+      ],
+      correctAnswer: "<ul>"
+    },
+    {
+      question: "What is the correct HTML for creating a hyperlink?",
+      options: [
+        "<a href=\"http://www.example.com\">Example</a>",
+        "<a>http://www.example.com</a>",
+        "<link>http://www.example.com</link>",
+        "<url>http://www.example.com</url>"
+      ],
+      correctAnswer: "<a href=\"http://www.example.com\">Example</a>"
+    },
+    {
+      question: "Which HTML attribute specifies an alternate text for an image, if the image cannot be displayed?",
+      options: [
+        "alt",
+        "src",
+        "longdesc",
+        "title"
+      ],
+      correctAnswer: "alt"
+    },
+    {
+      question: "Which HTML element is used to specify a footer for a document or section?",
+      options: [
+        "<footer>",
+        "<bottom>",
+        "<section>",
+        "<foot>"
+      ],
+      correctAnswer: "<footer>"
+    },
+    {
+      question: "What is the correct HTML for creating a text input field?",
+      options: [
+        "<input type=\"text\">",
+        "<textinput>",
+        "<textfield>",
+        "<input type=\"textfield\">"
+      ],
+      correctAnswer: "<input type=\"text\">"
+    },
+    {
+      question: "Which HTML element is used to define a table cell?",
+      options: [
+        "<td>",
+        "<th>",
+        "<tr>",
+        "<table>"
+      ],
+      correctAnswer: "<td>"
+    },
+    {
+      question: "What is the correct HTML for making a checkbox?",
+      options: [
+        "<input type=\"checkbox\">",
+        "<checkbox>",
+        "<input type=\"check\">",
+        "<check>"
+      ],
+      correctAnswer: "<input type=\"checkbox\">"
+    },
+    {
+      question: "Which HTML element is used to specify a header for a document or section?",
+      options: [
+        "<header>",
+        "<head>",
+        "<section>",
+        "<top>"
+      ],
+      correctAnswer: "<header>"
+    },
+    {
+      question: "Which HTML attribute is used to define inline styles?",
+      options: [
+        "style",
+        "class",
+        "font",
+        "styles"
+      ],
+      correctAnswer: "style"
+    },
+    {
+      question: "How can you open a link in a new tab/browser window?",
+      options: [
+        "<a href=\"url\" target=\"_blank\">",
+        "<a href=\"url\" new>",
+        "<a href=\"url\" target=\"new\">",
+        "<a href=\"url\" target=\"open\">"
+      ],
+      correctAnswer: "<a href=\"url\" target=\"_blank\">"
+    },
+    {
+      question: "Which HTML element is used to define a navigation link?",
+      options: [
+        "<nav>",
+        "<navigate>",
+        "<a>",
+        "<link>"
+      ],
+      correctAnswer: "<a>"
+    }
+  ];
+  
+  
   
   
 
@@ -50,13 +222,16 @@ export default function QuizAppFace() {
             setMarks(marks + 1)
             setIndex(index + 1)
         }
-        if(index+1 == questions.length){
+        else{
+            setIndex(index + 1)
+        }
+        if(index+1 == questions.length && marks>10){
             Swal.fire({
-                imageUrl: "https://i.imgflip.com/tlefg.jpg",
-                imageWidth: 300,
+                imageUrl: "https://i.imgflip.com/1m167s.jpg",
+                imageWidth: 400,
                 imageHeight: 200,
                 imageAlt: "Custom image",
-                title: `Quiz is completed and your total score is ${marks}`,
+                title: `Quiz is over and your total is ${marks} \nPercentage: ${marks*100/questions.length}%`,
                 showClass: {
                   popup: `
                     animate__animated
@@ -67,16 +242,38 @@ export default function QuizAppFace() {
                 hideClass: {
                   popup: `
                     animate__animated
-                    animate__slideOutRight  
+                    animate__slideOutRight
                     animate__faster
                   `
                 }
               });
-            setIndex(0)
+              setIndex(0)
             setMarks(0)
         }
-        else{
-            setIndex(index + 1)
+        if(index+1==questions.length && marks<10){
+            Swal.fire({
+                imageUrl: "https://i.redd.it/fohpg85pbl851.jpg",
+                imageWidth: 400,
+                imageHeight: 200,
+                imageAlt: "Custom image",
+                title: `Quiz is over and your total is ${marks} \nPercentage: ${marks*100/questions.length}%`,
+                showClass: {
+                  popup: `
+                    animate__animated
+                    animate__slideInLeft
+                    animate__faster
+                  `
+                },
+                hideClass: {
+                  popup: `
+                    animate__animated
+                    animate__slideOutRight
+                    animate__faster
+                  `
+                }
+              });
+              setIndex(0)
+            setMarks(0)
         }
     }
 
@@ -110,14 +307,14 @@ export default function QuizAppFace() {
         setIndex(index-1)
         if(index===0){
             Swal.fire({
-                icon: "error",
+                icon: "warning",
                 title: 'There are no questions at the back...',
                 showClass: {
                   popup: `
                     animate__animated
                     animate__slideInLeft
                     animate__faster
-                  `
+                         `
                 },
                 hideClass: {
                   popup: `
@@ -134,18 +331,25 @@ export default function QuizAppFace() {
     }
 
   return (
-    <div>
-        <h1>QUIZ</h1>
-        <p>Ques:{index+1}/{questions.length}</p>
-        <h3>Question({index+1}): {questions[index].question}</h3>
-        <div>
+    <>
+        <h1 id='heading'>QUIZ</h1>
+      <div id='container'>
+        <p id='questionsLength'>Ques:{index+1}/{questions.length}</p>
+        <div id='box'>
+        <p>Question({index+1}): {questions[index].question}</p>
+        </div>
+        <div id='optionBox'>
             {questions[index].options.map((x:any , i:number)=>{
-                return <button onClick={()=>checkAnswer(x ,questions[index].correctAnswer )} key={i}>{x}</button>
+                return <button id='options' onClick={()=>checkAnswer(x ,questions[index].correctAnswer )} key={i}>{x}</button>
             })}
         </div>
-        <button onClick={skipButton}>Skip</button>
-        <button onClick={backButton}>Back</button>
+        <div id='btnsBox'>
+        <button id='backBtn' onClick={backButton}>Back</button>
+        <button id='skipBtn' onClick={skipButton}>Skip</button>
+
+        </div>
     </div>
+            </>
     
   )
 }
