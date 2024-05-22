@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css';
 import VueSweetalert2 from 'vue-sweetalert2';
 import Swal from 'sweetalert2';
 import 'animate.css';
@@ -53,6 +52,10 @@ export default function QuizAppFace() {
         }
         if(index+1 == questions.length){
             Swal.fire({
+                imageUrl: "https://i.imgflip.com/tlefg.jpg",
+                imageWidth: 300,
+                imageHeight: 200,
+                imageAlt: "Custom image",
                 title: `Quiz is completed and your total score is ${marks}`,
                 showClass: {
                   popup: `
@@ -131,17 +134,17 @@ export default function QuizAppFace() {
     }
 
   return (
-    <div className='container mt-5'>
-        <h1 className='text-center'>QUIZ</h1>
-        <p className='text-end mt-5'>Ques:{index+1}/{questions.length}</p>
+    <div>
+        <h1>QUIZ</h1>
+        <p>Ques:{index+1}/{questions.length}</p>
         <h3>Question({index+1}): {questions[index].question}</h3>
-        <div className='d-flex justify-content-center mt-5 gap-3'>
+        <div>
             {questions[index].options.map((x:any , i:number)=>{
-                return <button onClick={()=>checkAnswer(x ,questions[index].correctAnswer )} className='btn btn-primary w-100' key={i}>{x}</button>
+                return <button onClick={()=>checkAnswer(x ,questions[index].correctAnswer )} key={i}>{x}</button>
             })}
         </div>
-        <button onClick={skipButton} className="btn btn-danger mt-5">Skip</button>
-        <button onClick={backButton} className="btn btn-success mt-5 ms-5">Back</button>
+        <button onClick={skipButton}>Skip</button>
+        <button onClick={backButton}>Back</button>
     </div>
     
   )
