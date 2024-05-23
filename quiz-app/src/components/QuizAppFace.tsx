@@ -283,7 +283,7 @@ export default function QuizAppFace() {
                 imageWidth: 300,
                 imageHeight: 200,
                 imageAlt: "Custom image",
-                title: `Unfortunately, you didn't pass the and your total is ${marks} \nPercentage: ${marks*100/questions.length}%`,
+                title: `Unfortunately, you didn't pass the quiz and your total is ${marks} \nPercentage: ${marks*100/questions.length}%`,
                 showClass: {
                   popup: `
                     animate__animated
@@ -325,6 +325,31 @@ export default function QuizAppFace() {
             setIndex(0)
             setMarks(0)
         }
+        if(index+1 == questions.length && marks>10){
+          Swal.fire({
+              imageUrl: "https://i.imgflip.com/1m167s.jpg",
+              imageWidth: 400,
+              imageHeight: 200,
+              imageAlt: "Custom image",
+              title: `Congratulations! You passed the quiz and your total is ${marks} \nPercentage: ${marks*100/questions.length}%`,
+              showClass: {
+                popup: `
+                  animate__animated
+                  animate__slideInLeft
+                  animate__faster
+                `
+              },
+              hideClass: {
+                popup: `
+                  animate__animated
+                  animate__slideOutRight
+                  animate__faster
+                `
+              }
+            });
+            setIndex(0)
+          setMarks(0)
+      }
     }
 
     const backButton = ()=>{
