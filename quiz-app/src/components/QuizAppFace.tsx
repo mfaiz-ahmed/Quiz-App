@@ -313,7 +313,7 @@ export default function QuizAppFace() {
                 imageWidth: 300,
                 imageHeight: 200,
                 imageAlt: "Custom image",
-                title: `Unfortunately, you didn't pass the and your total is ${marks} \nPercentage: ${marks*100/questions.length}%`,
+                title: `Unfortunately, you didn't pass the quiz and your total is ${marks} \nPercentage: ${marks*100/questions.length}%`,
                 hideClass: {
                   popup: `
                     animate__animated
